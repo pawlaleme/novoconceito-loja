@@ -9,7 +9,7 @@ const Arquitetos = () => {
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-center mb-6">Benefícios para Arquitetos Parceiros</h1>
         <p className="text-lg text-center mb-4">
-          Descubra as vantagens exclusivas ao se tornar parceiro arquiteto. Nossa parceria oferece uma série de benefícios que irão potencializar seu trabalho.
+          VEM AI.
         </p>
         {/* Adicione aqui mais conteúdo sobre os benefícios */}
       </div>

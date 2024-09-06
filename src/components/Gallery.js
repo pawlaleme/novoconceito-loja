@@ -10,14 +10,22 @@ const Gallery = () => {
   useEffect(() => {
     new Splide('#image-carousel', {
       type: 'loop',
-      perPage: 3,
+      perPage: 3, // Número de imagens por página para telas maiores
       autoplay: true,
+      gap: '1rem', // Adiciona espaçamento entre as imagens
       breakpoints: {
         640: {
-          perPage: 1,
+          perPage: 1, // Uma imagem por página em telas menores
+          gap: '0.5rem', // Menor espaçamento entre imagens em telas menores
+          heightRatio: 0.75, // Ajusta a altura da imagem em telas menores
         },
         768: {
-          perPage: 2,
+          perPage: 2, // Duas imagens por página em tablets
+          gap: '1rem',
+          heightRatio: 0.6, // Ajusta a altura da imagem em tablets
+        },
+        1024: {
+          perPage: 3, // Três imagens por página em desktops
         },
       },
     }).mount();
@@ -31,8 +39,12 @@ const Gallery = () => {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <section id="carrossel" className=" bg-gray-100"  style={{ marginTop: '-5rem', padding: '3rem'}}>
-      <p className=" mb-2" style={{ color: '#daa520' }}>_________________________________________________</p>
+    <section 
+      id="carrossel" 
+      className="bg-gray-100" 
+      style={{ marginTop: '0', padding: '2rem' }} // Ajuste para dispositivos móveis
+    >
+      <p className="mb-2" style={{ color: '#daa520' }}>________________________________________</p>
       <div id="image-carousel" className="splide">
         <div className="splide__track">
           <ul className="splide__list">
@@ -95,7 +107,7 @@ const Gallery = () => {
             <li className="splide__slide">
               <img
                 src="/mesajantar.jfif" // Substitua pelo caminho correto
-                alt="Poltrona"
+                alt="Mesa de Jantar"
                 className="carousel-image shadow-lg cursor-pointer"
                 onClick={() => openModal('/mesajantar.jfif')} // Substitua pelo caminho correto
               />

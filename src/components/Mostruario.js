@@ -1,26 +1,27 @@
 import React from 'react';
-import '../styles.css'; // Certifique-se de que o caminho está correto para o seu arquivo CSS
-
+import { useMediaQuery } from 'react-responsive';
+import '../styles.css';
 
 const MostWantedProducts = () => {
+    // Define breakpoints para dispositivos móveis e desktop
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1024px)' });
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
     const handleWhatsAppRedirect = (product) => {
         const encodedMessage = encodeURIComponent(
             `Olá, estou interessado no produto: ${product}. Gostaria de saber mais detalhes.`
         );
-
         const whatsappNumber = '15997764058';
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
         window.open(whatsappURL, '_blank');
     };
 
     return (
-        <section id="most-wanted-products" className="w-full p-8 bg-gray-100" style={{ marginTop: '-17rem', }}>
+        <section id="most-wanted-products" className="w-full p-8 bg-gray-100" style={{ marginTop: isTabletOrMobile ? '0' : '-17rem' }}>
             <div className="flex flex-col md:flex-row items-center justify-between">
 
                 {/* Coluna dos Produtos com Lista */}
-                <div className="md:w-2/2">
+                <div className="md:w-2/2 w-full">
                     <h2 className="text-3xl font-bold mb-8 text-yellow-600">Nossos produtos</h2>
                     <div className="space-y-10">
                         {/* Produto 1 */}
@@ -89,7 +90,7 @@ const MostWantedProducts = () => {
                 </div>
 
                 {/* Coluna do Produto em Destaque */}
-                <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+                <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center w-full">
                     <div className="bg-gray-100 p-6 rounded-lg text-center shadow-lg" style={{ maxWidth: '300px' }}>
                         <p className="text-gray-500 uppercase">MESA LATERAL</p>
                         <h4 className="text-22xl font-bold mt-2">DORA</h4>
@@ -108,7 +109,6 @@ const MostWantedProducts = () => {
                     </div>
                 </div>
             </div>
-
         </section>
     );
 };
