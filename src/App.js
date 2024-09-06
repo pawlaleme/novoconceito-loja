@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import './styles.css'; // Importe o CSS aqui
 import './animations.css'; // Importar o arquivo de animações

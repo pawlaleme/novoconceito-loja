@@ -1,37 +1,28 @@
-/* Estilos gerais */
 
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+
+
+/* Ajuste em dispositivos menores */
+@media (max-width: 768px) {
+
+    /* Ajuste o estilo das seções para garantir que não excedam a largura da tela */
+    section {
+        padding: 0 1rem;
+        /* Garante padding adequado em telas pequenas */
+        margin: 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+        /* Ajusta o padding para evitar transbordamento */
+    }
+
+    /* Certifica-se de que os carrosséis e slides não excedam a largura */
+    .splide__slide {
+        width: 100vw;
+        /* Faz com que cada slide ocupe toda a largura da tela */
+    }
 }
-
-/* Cabeçalho e Rodapé */
-
-
-header h1,
-footer p {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-header a {
-    color: var(--text-white);
-    text-decoration: none;
-}
-
-header a:hover {
-    text-decoration: underline;
-}
-
-
-
-/* Seções */
-section {
-    padding: 2rem 0;
-}
-
 
 
 /* Galeria */
@@ -68,32 +59,7 @@ section {
     cursor: pointer;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.25rem;
-    }
 
-
-
-    .banner h2 {
-        font-size: 2rem;
-    }
-
-    .banner p {
-        font-size: 1rem;
-    }
-
-    .space-x-4 {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .space-y-4 {
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-}
 
 /* Estilo para o layout responsivo */
 .flex-wrap {
