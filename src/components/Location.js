@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Location = () => (
-    <section id="localizacao" className="bg-gray-100">
+    <section id="localizacao" className="bg-gray-100"  style={{ marginTop: '-5rem', padding: '3rem'}}>
         <h2 className="text-2xl text-center font-bold mb-4">Localização</h2>
         <div className="bg-white p-4 text-center rounded-lg shadow-lg">
             <p>Estamos localizados na Rua São Francisco, 123, Centro, Capela do Alto - SP. Venha nos visitar!</p>

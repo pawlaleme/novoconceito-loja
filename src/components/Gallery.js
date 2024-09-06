@@ -31,7 +31,7 @@ const Gallery = () => {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <section id="carrossel" className=" bg-gray-100">
+    <section id="carrossel" className=" bg-gray-100"  style={{ marginTop: '-5rem', padding: '3rem'}}>
       <p className=" mb-2" style={{ color: '#daa520' }}>_________________________________________________</p>
       <div id="image-carousel" className="splide">
         <div className="splide__track">

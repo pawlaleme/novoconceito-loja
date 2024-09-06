@@ -16,7 +16,15 @@ const Products = () => {
     });
 
     return (
-        <section id="produtos" className="w-full p-8 bg-gray-100">
+        <section
+            id="produtos"
+            className="w-full p-8 bg-gray-100"
+            style={{
+                minHeight: '80vh', // Define uma altura mínima para a seção (80% da altura da janela)
+                padding: '3rem', // Expande o espaço interno (padding)
+                marginTop: '-4rem'
+            }}
+        >
             <div className="flex flex-col md:flex-row items-center justify-between">
                 {/* Coluna das Imagens */}
                 <div className="flex flex-wrap justify-center md:w-1/2 space-x-4 space-y-4">

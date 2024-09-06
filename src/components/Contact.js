@@ -32,7 +32,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contato" className=" bg-gray-100 text-center">
+        <section id="contato" className=" bg-gray-100 text-center" style={{ marginTop: '-5rem', padding: '3rem'}}>
             <h2 className="text-3xl font-bold mb-4">Contato</h2>
             <p className="mb-4">
                 
